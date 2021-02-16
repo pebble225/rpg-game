@@ -6,6 +6,7 @@
 # pebble225 specified files
 
 plugins/
+SDL2.dll
 
 # User-specific files
 *.rsuser
