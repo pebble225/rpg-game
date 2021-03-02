@@ -17,5 +17,5 @@ Will I regret the game's style choice eventually? 3D? Sprite sheets?
 
 class content
 {
-	//vector<GameObject*> instance;
+	
 };

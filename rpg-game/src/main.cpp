@@ -1,5 +1,22 @@
 #include <SDL.h>
 #include <iostream>
+#include <windows.h>
+
+#ifdef _DEBUG
+
+void CloseConsole()
+{
+	std::cout << "Running in debug mode. Console active." << std::endl;
+}
+
+#else
+
+void CloseConsole()
+{
+	FreeConsole();
+}
+
+#endif
 
 SDL_Window* window;
 SDL_Surface* buffer;
@@ -10,7 +27,7 @@ bool running = true;
 void input()
 {
 	SDL_Event e;
-
+	
 	while (SDL_PollEvent(&e))
 	{
 		if (e.type == SDL_QUIT)
@@ -22,6 +39,8 @@ void input()
 
 int main(int argc, char* args[])
 {
+	CloseConsole();
+
 	int bootState = SDL_Init(SDL_INIT_EVERYTHING);
 
 	if (bootState < 0)
@@ -48,6 +67,10 @@ int main(int argc, char* args[])
 
 	g = SDL_CreateRenderer(window, -1, 0);
 	
+	SDL_SetRenderDrawColor(g, 0x00, 0x00, 0x00, 0xFF);
+	SDL_RenderClear(g);
+	SDL_RenderPresent(g);
+
 	while (running)
 	{
 		input();
