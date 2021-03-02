@@ -5,8 +5,14 @@
 
 # pebble225 specified files
 
-plugins/
+rpg-game/plugins/
 SDL2.dll
+libjpeg-9.dll
+libpng16-16.dll
+libtiff-5.dll
+libwebp-7.dll
+SDL2_image.dll
+zlib1.dll
 
 # User-specific files
 *.rsuser
