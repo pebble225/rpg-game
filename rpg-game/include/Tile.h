@@ -2,20 +2,27 @@
 
 #include <cstdint>
 
-//maybe put the macros somewhere else eventually
+//maybe put the tile_id namespace somewhere else eventually
 
-#define TILEID_NULL 0x0000
+typedef uint16_t tileID;
 
-//elevation
+namespace tile_ids
+{
+	//null tile
 
-#define TILEID_GRASS_0 0x0001
-#define TILEID_BEACH_SAND 0x0002
-#define TILEID_SHALLOW_WATER 0x0003
-#define TILEID_DEEP_WATER 0x0004
-#define TILEID_MOUNTAIN_STONE 0x0005
+	constexpr tileID null = 0x0000;
+
+	//elevation terrain tiles
+
+	constexpr tileID grass = 0x0001;
+	constexpr tileID beachSand = 0x0002;
+	constexpr tileID shallowWater = 0x0003;
+	constexpr tileID deepWater = 0x0004;
+	constexpr tileID mountainStone = 0x0005;
+};
 
 class Tile
 {
 private:
-	uint16_t id;
+	tileID id;
 };
