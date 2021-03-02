@@ -145,13 +145,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\imgdata.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\content.h" />
-    <ClInclude Include="include\imgdata.h" />
     <ClInclude Include="include\Tile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

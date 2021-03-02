@@ -4,8 +4,6 @@
 #include <iostream>
 #include <windows.h>
 
-#include "../include/imgdata.h"
-
 /*
 
 Notes about VS config will go here!
@@ -86,8 +84,6 @@ int main(int argc, char* args[])
 
 	g = SDL_CreateRenderer(window, -1, 0);
 	
-	//imgData::initialize(); //This don't work
-
 	SDL_SetRenderDrawColor(g, 0x00, 0x00, 0x00, 0xFF);
 	SDL_RenderClear(g);
 	SDL_RenderPresent(g);
@@ -96,8 +92,6 @@ int main(int argc, char* args[])
 	{
 		input();
 	}
-
-	//imgData::uninitialize(); //This don't work either
 
 	SDL_DestroyRenderer(g);
 	SDL_FreeSurface(buffer);
