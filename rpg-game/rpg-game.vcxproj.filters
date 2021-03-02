@@ -23,5 +23,8 @@
     <ClInclude Include="include\content.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Tile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
