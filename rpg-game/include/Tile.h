@@ -28,6 +28,8 @@ class Tile
 {
 private:
 	tileID id;
+	SDL_Surface* buffer;
+
 public:
 	Tile(tileID id);
 
