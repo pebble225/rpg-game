@@ -17,13 +17,5 @@ void Tile::setID(tileID id)
 
 void Tile::drawTile(const SDL_Renderer* g)
 {
-	switch (id)
-	{
 	
-		//need to do image handling before continuing
-
-	case tile_ids::null:
-	default:
-		break;
-	}
 }
