@@ -1,5 +1,10 @@
 #pragma once
+
+#include <iostream>
+#include <fstream>
 #include <vector>
+#include <cstdint>
+#include <sstream>
 
 #include "Tile.h"
 
@@ -16,7 +21,7 @@ public:
 
 	content();
 
-	void init();//just in case I need references that I can't access when initializing content.
+	void init();
 
 	void loadTileSet();
 

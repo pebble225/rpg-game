@@ -27,7 +27,7 @@ int main()
 {
 	file = std::ofstream("../rpg-game/res/imgData");
 
-	addTile("F001", "./res/img/sample");
+	addTile("F001", "./res/img/sample.png");
 
 	file.close();
 }
