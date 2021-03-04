@@ -145,6 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\content.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Tile.cpp" />
   </ItemGroup>

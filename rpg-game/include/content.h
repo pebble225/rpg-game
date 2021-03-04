@@ -1,21 +1,24 @@
 #pragma once
 #include <vector>
 
+#include "Tile.h"
+
 /*
 
-Generate a 65536x65536 terrain with some form of perlin noise.
-
-I need artwork whether I draw it myself or not. Characters, grass, trees, water, etc.
-
-How do I organize my constant data? Block ids, items ids, entity ids, etc.
-
-Will I regret the game's style choice eventually? 3D? Sprite sheets?
+content is considered the "central operation" of the game. Everything meets up here.
 
 */
 
-//class GameObject;
-
 class content
 {
-	
+public:
+	std::vector<Tile> tileSet;
+
+	content();
+
+	void init();//just in case I need references that I can't access when initializing content.
+
+	void loadTileSet();
+
+	~content();
 };
