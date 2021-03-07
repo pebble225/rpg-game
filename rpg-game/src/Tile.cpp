@@ -19,3 +19,8 @@ void Tile::drawTile(const SDL_Renderer* g)
 {
 	
 }
+
+Tile::~Tile()
+{
+	
+}

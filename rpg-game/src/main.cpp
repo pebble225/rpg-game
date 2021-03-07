@@ -4,6 +4,8 @@
 #include <iostream>
 #include <windows.h>
 
+#include "../include/content.h"
+
 /*
 
 Notes about VS config will go here!
@@ -47,6 +49,8 @@ void input()
 	}
 }
 
+content c;
+
 int main(int argc, char* args[])
 {
 	CloseConsole();
@@ -87,6 +91,8 @@ int main(int argc, char* args[])
 	SDL_SetRenderDrawColor(g, 0x00, 0x00, 0x00, 0xFF);
 	SDL_RenderClear(g);
 	SDL_RenderPresent(g);
+
+	c.init();
 
 	while (running)
 	{
