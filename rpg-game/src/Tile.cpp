@@ -3,14 +3,12 @@
 Tile::Tile()
 {
 	id = NULL;
-	src = "";
 	buffer = NULL;
 }
 
-Tile::Tile(tileID id, std::string src)
+Tile::Tile(tileID id)
 {
 	this->id = id;
-	this->src = src;
 }
 
 tileID Tile::getID()
@@ -23,7 +21,7 @@ void Tile::setID(tileID id)
 	this->id = id;
 }
 
-void Tile::loadImage(SDL_Renderer* g)
+void Tile::loadImage(SDL_Renderer* g, std::string src)
 {
 	const char* src_cstr = src.c_str();
 

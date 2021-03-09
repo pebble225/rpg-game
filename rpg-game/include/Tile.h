@@ -34,19 +34,18 @@ namespace tile_ids
 class Tile
 {
 private:
-	tileID id;
-	std::string src;
+	tileID id; // 2 bytes
 
-	SDL_Texture* buffer;
+	SDL_Texture* buffer; // 4 bytes (assuming 32 bit memory addresses)
 
 public:
 	Tile();
-	Tile(tileID id, std::string src);
+	Tile(tileID id);
 
 	tileID getID();
 	void setID(tileID id);
 
-	void loadImage(SDL_Renderer* g);
+	void loadImage(SDL_Renderer* g, std::string src);
 
 	void drawTile(SDL_Renderer* g, int x, int y);
 

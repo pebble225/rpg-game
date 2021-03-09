@@ -6,6 +6,7 @@
 #include <cstdint>
 #include <sstream>
 #include <cmath>
+#include <unordered_map>
 
 #include "Tile.h"
 
@@ -18,7 +19,7 @@ content is considered the "central operation" of the game. Everything meets up h
 class content
 {
 public:
-	Tile* TileSet[0x10000];
+	std::unordered_map<tileID, Tile> TileSet;
 
 	content();
 
