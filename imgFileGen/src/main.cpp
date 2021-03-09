@@ -27,6 +27,7 @@ so for now I'm just going to enter the numbers.
 
 Comma will seperate different elements of the same Tile.
 Semicolon will seperate Tiles.
+Pound symbol denotes EOF so that a blank Tile isn't generated.
 
 */
 
@@ -35,6 +36,8 @@ int main()
 	file = std::ofstream("../rpg-game/res/imgData");
 
 	addTile("F001", "./res/img/sample.png");
+
+	file << "#;" << std::endl;
 
 	file.close();
 }

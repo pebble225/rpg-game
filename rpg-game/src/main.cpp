@@ -87,16 +87,32 @@ int main(int argc, char* args[])
 	buffer = SDL_GetWindowSurface(window);
 
 	g = SDL_CreateRenderer(window, -1, 0);
-	
-	SDL_SetRenderDrawColor(g, 0x00, 0x00, 0x00, 0xFF);
-	SDL_RenderClear(g);
-	SDL_RenderPresent(g);
 
-	c.init();
+	c.init(g);
+
+	const int tps = 60;
+	const double ns = 1000 / tps;
+
+	double delta = 0;
+
+	time_t lastTime = SDL_GetTicks();
 
 	while (running)
 	{
 		input();
+
+		time_t nowTime = SDL_GetTicks();
+		delta += (double)(nowTime - lastTime) / ns;
+		lastTime = nowTime;
+
+		while (delta >= 1.0)
+		{
+			c.Update();
+
+			delta -= 1.0;
+		}
+
+		c.Render(g, buffer);
 	}
 
 	SDL_DestroyRenderer(g);

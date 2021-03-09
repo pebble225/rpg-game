@@ -3,7 +3,12 @@
 #include <SDL.h>
 #include <SDL_image.h>
 
+#include "GameConstants.h"
+
 #include <cstdint>
+
+#include <iostream>
+#include <string>
 
 //maybe put the tile_id namespace somewhere else eventually
 
@@ -30,15 +35,20 @@ class Tile
 {
 private:
 	tileID id;
-	SDL_Surface* buffer;
+	std::string src;
+
+	SDL_Texture* buffer;
 
 public:
-	Tile(tileID id);
+	Tile();
+	Tile(tileID id, std::string src);
 
 	tileID getID();
 	void setID(tileID id);
 
-	void drawTile(const SDL_Renderer* g);
+	void loadImage(SDL_Renderer* g);
+
+	void drawTile(SDL_Renderer* g, int x, int y);
 
 	~Tile();
 };
