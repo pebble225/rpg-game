@@ -92,8 +92,6 @@ void content::Render(SDL_Renderer* g, SDL_Surface* buffer)
 {
 	SDL_SetRenderDrawColor(g, 0x00, 0x00, 0x00, 0xFF);
 	SDL_RenderClear(g);
-
-	TileSet[tile_ids::sampleTile].drawTile(g, x, (int)(sin((double)x / 10.0) * 50.0 + 400.0));
 	
 	SDL_RenderPresent(g);
 }
